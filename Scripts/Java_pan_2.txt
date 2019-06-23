@@ -1,0 +1,12 @@
+Object[] args = {new pinCode, regNumber, fullDirectoryName};
+MessageFormat fmt = new MessageFormat("ring.cmd license info --name {0}-{1} --path \"{3}\"");
+System.out.println(fmt.format(args));
+
+либо 
+
+String str = String.format("ring.cmd license info --name %s-%s --path \"%s\"",
+pinCode, regNumber, fullDirectoryName);
+
+
+
+И ещё - иногда требуется двойные-двойные кавычкит.е. если варианты не отработают - пробуй \"\"%s\"\"
