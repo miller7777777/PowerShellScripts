@@ -1,0 +1,1 @@
+Get-Process | Out-GridView -PassThru | Stop-Process
