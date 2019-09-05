@@ -1,0 +1,1 @@
+http://www.dp.keydisk.ru/rootCA/root-CA-gost-2012.cer
