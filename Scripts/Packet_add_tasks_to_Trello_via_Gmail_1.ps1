@@ -1,10 +1,9 @@
 <#
-Прототип скрипта для пакетной рассылки задач на электронную почту
+Скрипт для пакетной рассылки задач в Trello  через электронную почту
 #>
 
 $clientsFile = "C:\Temp\Клиенты.txt"
 $dateFile = "C:\Temp\Дата.txt"
-# $EmailList = "miller7772+yawhfi8pzurry6zkfdeq@boards.trello.com"
 $EmailList = "miller7772+yawhfi8pzurry6zkfdeq@boards.trello.com, miller777@mail.ru"
 $work = "ИТС"
 $color = "yellow"
@@ -87,16 +86,5 @@ Write-Host "Всего клиентов: " $clients.Length
 foreach($client in $clients){
     $Subject = $client + " (" + $work + ") " + $month + " #" + $date + " #" + $color 
     $MailContent = ""
-    # $EmailList = "miller777@mail.ru"
     Send-GZReport -Subject $Subject -MailContent $MailContent -Recipients $EmailList
-# Start-Sleep 5
-
 }
-
-
-    # $Subject = "Report"
-    # $MailContent = "Что-то проверяем"
-    # $EmailList = "miller777@mail.ru"
-    # Send-GZReport("miller777@mail.ru", "miller777@mail.ru", "miller777@mail.ru", "miller777@mail.ru")
-    # Send-GZReport -Subject $UAlias.Alias -MailContent $MailContent -Recipients $EmailList
-    # Send-GZReport -Subject $Subject -MailContent $MailContent -Recipients $EmailList
